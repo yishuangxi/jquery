@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="./jquery-2.1.0.js"></script>
+    <script>
+        function alert(msg){
+            console.log("alert: ", msg);
+        }
+        function Aaron() {
+            alert("hello");
+        };
+        Aaron(); //这里调用Aaron，输出world而不是hello
+
+        function Aaron() {
+            alert("world");
+        };
+        Aaron(); //这里调用Aaron，当然输出world
+    </script>
+</head>
+<body>
+这是jQuery调试页面
+<div>a</div><div>b</div><div>c</div><div>d</div><div>e</div>
+<form id="form">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+</form>
+</body>
+</html>
