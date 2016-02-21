@@ -110,8 +110,10 @@
          * 6,那么，只有一个方法可以实现6的结论，那就是让jQuery.fn.init构造函数的原型属性指向对象jQuery.fn，
          *   也就是jQuery.fn.init.prototype=jQuery.fn
          * 7,疑问：为什么要把好好的一个jQuery()对象，弄成一个jQuery.fn.init()对象
+         * 解答疑问7:因为jquery常用场景是选择dom元素，语法为jQuery("a")，其返回所有的a dom元素;
          **/
         // Define a local copy of jQuery
+            /**以如下方式定义jQuery的好处是：使用jQuery(selector)的时候，就无需使用new操作符了**/
             jQuery = function (selector, context) {
                 // The jQuery object is actually just the init constructor 'enhanced'
                 // Need init if jQuery is called (just allow error to be thrown if not included)
